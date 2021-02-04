@@ -1,0 +1,15 @@
+<div>
+  <h1>
+    <fa-icon [icon]="faDisease"></fa-icon>Epidemic Counter: {{ sliderValue }}
+    <fa-icon [icon]="faDisease"></fa-icon>
+  </h1>
+  <mat-slider
+    (change)="onSliderChange($event)"
+    thumbLabel
+    tickInterval="1"
+    min="0"
+    max="5"
+    step="1"
+    value="0"
+  ></mat-slider>
+</div>

@@ -1,0 +1,13 @@
+<span>Turn {{ turn }}:</span>
+<mat-action-list *ngFor="let city of citiesList">
+  <button
+    style="background-color: aqua"
+    mat-list-item
+    (click)="onCardDrawn($event)"
+  >
+    <mat-icon matListIcon>
+      <fa-icon style="color: {{ city.color }}" [icon]="cityIcon"></fa-icon>
+    </mat-icon>
+    <h3 style="color: {{ city.color }}" matLine>{{ city.name }}</h3>
+  </button>
+</mat-action-list>
