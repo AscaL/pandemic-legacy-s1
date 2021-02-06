@@ -13,6 +13,7 @@ import { CitiesListComponent } from './components/cities-list/cities-list.compon
 import { PandemicGameComponent } from './components/pandemic-game/pandemic-game.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { EpidemicCounterComponent } from './components/epidemic-counter/epidemic-counter.component';
+import { DeckStatsComponent } from './components/deck-stats/deck-stats.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { EpidemicCounterComponent } from './components/epidemic-counter/epidemic
     CitiesListComponent,
     PandemicGameComponent,
     EpidemicCounterComponent,
+    DeckStatsComponent,
   ],
   imports: [
     BrowserModule,

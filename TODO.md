@@ -1,0 +1,3 @@
+- [ ] Number of turns
+- [ ] Undo/Redo
+- [ ] prob of epidemic

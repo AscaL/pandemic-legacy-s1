@@ -13,10 +13,6 @@ export class EpidemicCounterComponent implements OnInit {
   faDisease = faDisease;
 
   onSliderChange(sliderChange: any) {
-    console.log(
-      '🚀 ~ EpidemicCounterComponent ~ onEpidemicDrawn ~ evt',
-      sliderChange.value
-    );
     this.sliderValue = sliderChange.value;
     this.epidemicDrawn.emit(sliderChange.value);
   }

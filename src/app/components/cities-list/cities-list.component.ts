@@ -37,10 +37,6 @@ export class CitiesListComponent implements OnInit {
       this.changelog.push(
         `${propName}: currentValue = ${cur}, previousValue = ${prev}`
       );
-      console.log(
-        '🚀 ~ CitiesListComponent ~ ngOnChanges ~ this.changelog',
-        this.changelog
-      );
     }
   }
 
