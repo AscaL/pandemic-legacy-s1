@@ -11,12 +11,7 @@ export class DeckStatsComponent implements OnInit {
   epidemicChance: number = 0;
   cityDrawChance: number = 0;
 
-  onEpidemicDrawn(epidemicLevel: any) {
-    console.log(
-      '🚀 ~ PandemicGameComponent ~ onEpidemicDrawn ~ evt',
-      epidemicLevel
-    );
-  }
+  onEpidemicDrawn(epidemicLevel: any) {}
 
   onCardDrawn() {
     this.calculateEpidemicChance();

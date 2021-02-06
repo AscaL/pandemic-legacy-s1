@@ -8,10 +8,7 @@ import {
   SimpleChanges,
 } from '@angular/core';
 import { MatListModule } from '@angular/material/list';
-import {
-  Cities,
-  City,
-} from '/Users/emanueleorfanelli/Documents/repos/pandemic-legacy-s1/src/app/cities';
+import { Cities, City } from '../../cities';
 
 @Component({
   selector: 'app-pandemic-game',
@@ -41,10 +38,6 @@ export class PandemicGameComponent implements OnInit {
       this.citiesT3,
       this.citiesT4,
       this.citiesT5
-    );
-    console.log(
-      '🚀 ~ PandemicGameComponent ~ ngOnInit ~ this.allCities',
-      this.allCities
     );
     // undo con prev changes fattibile!!
   }

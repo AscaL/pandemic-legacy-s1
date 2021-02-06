@@ -8,7 +8,7 @@ import {
   Output,
   SimpleChanges,
 } from '@angular/core';
-import { City } from '/Users/emanueleorfanelli/Documents/repos/pandemic-legacy-s1/src/app/cities';
+import { City } from '../../cities';
 import { faCity } from '@fortawesome/free-solid-svg-icons';
 import * as _ from 'lodash';
 
