@@ -1,37 +1,40 @@
-<div class="row">
-  <app-epidemic-counter class="col-6" (epidemicDrawn)="onEpidemicDrawn($event)" (epidemicDrawn)="
+<div class="container">
+
+  <div class="row">
+    <app-epidemic-counter class="col-6" (epidemicDrawn)="onEpidemicDrawn($event)" (epidemicDrawn)="
       stats.calculateCityDrawChance(newArrayLen, epidemicCounter)
     ">
-  </app-epidemic-counter>
-  <app-deck-stats #stats class="col-6" [deckSize]="52"></app-deck-stats>
-</div>
-<br />
-<div class="row">
-  <app-cities-list class="col-2" (cardDrawn)="onCardDrawn($event)" (click)="
+    </app-epidemic-counter>
+    <app-deck-stats #stats class="col-6" [deckSize]="52"></app-deck-stats>
+  </div>
+  <br />
+  <div class="row">
+    <app-cities-list class="col-2" (cardDrawn)="onCardDrawn($event)" (click)="
       stats.calculateCityDrawChance(
         changeProbabilityDeckIfEmpty(allCities, epidemicCounter),
         epidemicCounter
       )
     " [citiesList]="allCities[0]" [turn]="0">
-  </app-cities-list>
-  <app-cities-list class="col-2" (cardDrawn)="onCardDrawn($event)" (click)="
+    </app-cities-list>
+    <app-cities-list class="col-2" (cardDrawn)="onCardDrawn($event)" (click)="
       stats.calculateCityDrawChance(changeProbabilityDeckIfEmpty(allCities, epidemicCounter), epidemicCounter)
     " [citiesList]="allCities[1]" [turn]="1">
-  </app-cities-list>
-  <app-cities-list class="col-2" (cardDrawn)="onCardDrawn($event)" (click)="
+    </app-cities-list>
+    <app-cities-list class="col-2" (cardDrawn)="onCardDrawn($event)" (click)="
       stats.calculateCityDrawChance(changeProbabilityDeckIfEmpty(allCities, epidemicCounter), epidemicCounter)
     " [citiesList]="allCities[2]" [turn]="2">
-  </app-cities-list>
-  <app-cities-list class="col-2" (cardDrawn)="onCardDrawn($event)" (click)="
+    </app-cities-list>
+    <app-cities-list class="col-2" (cardDrawn)="onCardDrawn($event)" (click)="
       stats.calculateCityDrawChance(changeProbabilityDeckIfEmpty(allCities, epidemicCounter), epidemicCounter)
     " [citiesList]="allCities[3]" [turn]="3">
-  </app-cities-list>
-  <app-cities-list class="col-2" (cardDrawn)="onCardDrawn($event)" (click)="
+    </app-cities-list>
+    <app-cities-list class="col-2" (cardDrawn)="onCardDrawn($event)" (click)="
       stats.calculateCityDrawChance(changeProbabilityDeckIfEmpty(allCities, epidemicCounter), epidemicCounter)
     " [citiesList]="allCities[4]" [turn]="4">
-  </app-cities-list>
-  <app-cities-list class="col-2" (cardDrawn)="onCardDrawn($event)" (click)="
+    </app-cities-list>
+    <app-cities-list class="col-2" (cardDrawn)="onCardDrawn($event)" (click)="
       stats.calculateCityDrawChance(changeProbabilityDeckIfEmpty(allCities, epidemicCounter), epidemicCounter)
     " [citiesList]="allCities[5]" [turn]="5">
-  </app-cities-list>
+    </app-cities-list>
+  </div>
 </div>

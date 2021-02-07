@@ -40,6 +40,8 @@ export class CitiesListComponent implements OnInit {
     }
   }
 
+  chanceWithOneDraw() {}
+
   onCardDrawn(evt: any) {
     const removedCity = _.remove(this.citiesList, [
       'name',

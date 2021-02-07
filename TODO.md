@@ -1,3 +1,4 @@
 - [ ] Number of turns
 - [ ] Undo/Redo
 - [ ] prob of epidemic
+- [ ] Draw stats on each decklist (for 1 draw)

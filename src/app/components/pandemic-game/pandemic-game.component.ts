@@ -42,7 +42,21 @@ export class PandemicGameComponent implements OnInit {
     // undo con prev changes fattibile!!
   }
 
+  ngOnChanges(changes: SimpleChanges) {
+    for (const propName in changes) {
+      const chng = changes[propName];
+      const cur = JSON.stringify(chng.currentValue);
+      console.log('🚀 ~ PandemicGameComponent ~ ngOnChanges ~ cur', cur);
+      const prev = JSON.stringify(chng.previousValue);
+      console.log('🚀 ~ PandemicGameComponent ~ ngOnChanges ~ prev', prev);
+      this.changelog.push(
+        `${propName}: currentValue = ${cur}, previousValue = ${prev}`
+      );
+    }
+  }
+
   onEpidemicDrawn(epidemicLevel: number) {
+    console.log(this.changelog);
     this.epidemicCounter = epidemicLevel;
     switch (epidemicLevel) {
       case 1:
