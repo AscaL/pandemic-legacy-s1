@@ -47,6 +47,7 @@ export class CitiesListComponent implements OnInit {
       'name',
       evt.target.innerText,
     ])[0];
+    this.citiesList = _.sortBy(this.citiesList, 'name');
     this.cardDrawn.emit(removedCity);
   }
 

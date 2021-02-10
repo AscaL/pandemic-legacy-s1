@@ -9,6 +9,7 @@ import {
 } from '@angular/core';
 import { MatListModule } from '@angular/material/list';
 import { Cities, City } from '../../cities';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-pandemic-game',
@@ -30,7 +31,7 @@ export class PandemicGameComponent implements OnInit {
   allCities: any = [];
 
   ngOnInit() {
-    this.citiesT0 = Cities;
+    this.citiesT0 = _.sortBy(Cities, 'name');
     this.allCities.push(
       this.citiesT0,
       this.citiesT1,
@@ -98,9 +99,6 @@ export class PandemicGameComponent implements OnInit {
     if (city === undefined) {
       return;
     }
-    this.allCities[0] = this.allCities[0].map((el: any) =>
-      Object.assign({}, el)
-    );
     switch (this.epidemicCounter) {
       case 0:
         this.allCities[1].push(city);
